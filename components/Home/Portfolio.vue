@@ -2,9 +2,11 @@
   <section class="portfolio">
     <div class="container">
       <div class="portfolio__content">
-        <div class="portfolio__title heading--primary">Portfolio</div>
+        <div data-aos="fade-up" class="portfolio__title heading--primary">
+          Portfolio
+        </div>
         <div class="portfolio__cards">
-          <div class="portfolio__card">
+          <div data-aos="zoom-in" class="portfolio__card">
             <div class="portfolio__card__img">
               <img
                 src="~assets/img/social-app.png"
@@ -41,7 +43,7 @@
               </a>
             </div>
           </div>
-          <div class="portfolio__card">
+          <div data-aos="zoom-in" class="portfolio__card">
             <div class="portfolio__card__img">
               <img
                 src="~assets/img/handbag-app.png"

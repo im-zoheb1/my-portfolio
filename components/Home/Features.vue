@@ -2,8 +2,8 @@
   <section class="features">
     <div class="container">
       <!-- <h1 class="features--heading heading--primary">Features</h1> -->
-      <div data-aos="fade-down" class="features__cards">
-        <div class="features__card-item">
+      <div class="features__cards">
+        <div data-aos="fade-down" class="features__card-item">
           <svg
             class="features__card--icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@
             My layouts work on all devices desktop, mobile or tablet
           </div>
         </div>
-        <div class="features__card-item">
+        <div data-aos="fade-down" class="features__card-item">
           <svg
             class="features__card--icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@
             My code is optimized and my websites are fast
           </div>
         </div>
-        <div class="features__card-item">
+        <div data-aos="fade-down" class="features__card-item">
           <svg
             class="features__card--icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@
             My designs are user friendly
           </div>
         </div>
-        <div class="features__card-item">
+        <div data-aos="fade-down" class="features__card-item">
           <svg
             class="features__card--icon"
             xmlns="http://www.w3.org/2000/svg"

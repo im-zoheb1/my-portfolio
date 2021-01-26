@@ -3,14 +3,19 @@
     <div class="container">
       <div class="contact__content">
         <div class="contact__discr">
-          <h1 class="contact__discr--title heading--primary">Get in touch</h1>
-          <div class="contact__discr--description paragraph--normal">
+          <h1 data-aos="fade-up" class="contact__discr--title heading--primary">
+            Get in touch
+          </h1>
+          <div
+            data-aos="fade-up"
+            class="contact__discr--description paragraph--normal"
+          >
             Do you have a project on your mind? Do you want to make your
             business grow or look awesome? Contact me and I'll help you to bring
             your ideas to life
           </div>
           <ul class="contact__discr--list">
-            <li class="contact__discr--list-item">
+            <li data-aos="fade-up" class="contact__discr--list-item">
               <img
                 class="contact__discr--list-icon"
                 src="~assets/svg/whatsapp.svg"
@@ -19,7 +24,7 @@
                 +923436113530
               </div>
             </li>
-            <li class="contact__discr--list-item">
+            <li data-aos="fade-up" class="contact__discr--list-item">
               <img
                 class="contact__discr--list-icon"
                 src="~assets/svg/email.svg"
@@ -30,7 +35,7 @@
             </li>
           </ul>
         </div>
-        <form class="contact__form">
+        <form data-aos="fade" class="contact__form">
           <h2 class="contact__form--title heading--secondary">Contact me</h2>
           <input
             class="contact__form--input form--input form--input--text"

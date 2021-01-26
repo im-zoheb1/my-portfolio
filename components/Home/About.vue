@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="container">
-      <div class="about__card">
+      <div data-aos="fade" class="about__card">
         <div class="about__img">
           <img
             src="~assets/img/about-photo.jpg"
@@ -10,15 +10,17 @@
           />
         </div>
         <div class="about__content">
-          <div class="about--title heading--secondary">about me</div>
-          <div class="about--paragraph paragraph--small">
+          <div data-aos="fade-left" class="about--title heading--secondary">
+            about me
+          </div>
+          <div data-aos="fade-left" class="about--paragraph paragraph--small">
             I’m from Pakistan. I’m a Self-motivated Web Developer with
             experience of working on multiple projects. Passionate, hardworking
             and open to opportunities. I have been exploring the web
             technologies since 3+ years now.
           </div>
           <div class="about__list">
-            <div class="about__list--item">
+            <div data-aos="fade-left" class="about__list--item">
               <svg
                 class="about__list--icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +52,7 @@
               </svg>
               <div class="about__list--text paragraph--small">Zohaib Khan</div>
             </div>
-            <div class="about__list--item">
+            <div data-aos="fade-left" class="about__list--item">
               <svg
                 class="about__list--icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +85,7 @@
                 +923436113530
               </div>
             </div>
-            <div class="about__list--item">
+            <div data-aos="fade-left" class="about__list--item">
               <svg
                 class="about__list--icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -117,9 +119,9 @@
               </div>
             </div>
           </div>
-          <div class="about__interests">Interests</div>
+          <div data-aos="fade-left" class="about__interests">Interests</div>
           <div class="about__chips chips">
-            <div class="chips__item">
+            <div data-aos="fade-left" class="chips__item">
               <svg
                 class="chips__item--icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +152,7 @@
               </svg>
               <div class="chips__item--text">Music</div>
             </div>
-            <div class="chips__item">
+            <div data-aos="fade-left" class="chips__item">
               <svg
                 class="chips__item--icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +183,7 @@
               </svg>
               <div class="chips__item--text">Travel</div>
             </div>
-            <div class="chips__item">
+            <div data-aos="fade-left" class="chips__item">
               <svg
                 class="chips__item--icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +214,7 @@
               </svg>
               <div class="chips__item--text">Mountains</div>
             </div>
-            <div class="chips__item">
+            <div data-aos="fade-left" class="chips__item">
               <svg
                 class="chips__item--icon"
                 xmlns="http://www.w3.org/2000/svg"
