@@ -95,17 +95,26 @@ section {
     font-weight: 600;
     color: $text-dark;
     margin-bottom: 0.5rem;
+    @include respond(phone) {
+      margin-bottom: 10px;
+    }
   }
   &--paragraph {
     color: $text-dark;
     word-spacing: 2px;
     margin-bottom: 1.5rem;
+    @include respond(phone) {
+      margin-bottom: 10px;
+    }
   }
   &__list {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 1rem;
+    @include respond(phone) {
+      margin-bottom: 10px;
+    }
     &--item {
       display: flex;
       flex-direction: row;
@@ -129,6 +138,10 @@ section {
     letter-spacing: 1px;
     color: $text-dark;
     margin-bottom: 1rem;
+    @include respond(phone) {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -146,6 +159,11 @@ section {
     border-radius: 50px;
     padding: 0.4rem 1.2rem;
     margin-bottom: 1rem;
+    @include respond(phone) {
+      padding: 6px 12px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
     &--icon {
       height: 1.6rem;
       margin-right: 0.7rem;
@@ -157,6 +175,9 @@ section {
     &--text {
       font-size: 1.4rem;
       color: $text-light;
+      @include respond(phone) {
+        font-size: $text-large;
+      }
     }
   }
 }
@@ -261,7 +282,7 @@ section {
       margin-right: 5rem;
       @include respond(phone) {
         margin-right: 0;
-        margin-bottom: 3rem;
+        margin-bottom: 6rem;
       }
     }
     &__img {
@@ -284,6 +305,9 @@ section {
       padding-bottom: 1rem;
       margin-bottom: 5px;
       position: relative;
+      @include respond(phone) {
+        margin-bottom: 12px;
+      }
       &::after {
         content: '';
         position: absolute;
@@ -296,6 +320,9 @@ section {
     }
     &--paragraph {
       margin-bottom: 5px;
+      @include respond(phone) {
+        margin-bottom: 12px;
+      }
     }
     &--btn {
       border: 2px solid $text-dark;
