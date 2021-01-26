@@ -5,6 +5,7 @@
   cursor: pointer;
   letter-spacing: 1px;
   font-weight: 500;
+  text-decoration: none;
   &--lg {
     font-size: $text-medium;
     padding: 0.8rem 1.7rem;
@@ -32,9 +33,11 @@
   }
   &--light {
     border: 2px solid $text-light;
+    color: $text-light;
   }
   &--dark {
     border: 2px solid $text-dark;
+    color: $text-dark;
   }
 }
 

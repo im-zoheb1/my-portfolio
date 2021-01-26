@@ -2,7 +2,7 @@
   <section class="features">
     <div class="container">
       <!-- <h1 class="features--heading heading--primary">Features</h1> -->
-      <div class="features__cards">
+      <div data-aos="fade-down" class="features__cards">
         <div class="features__card-item">
           <svg
             class="features__card--icon"

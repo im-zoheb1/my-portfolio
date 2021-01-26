@@ -14,12 +14,14 @@
             </div>
             <div class="portfolio__card--info">
               <div class="portfolio__card--title heading--secondary">
-                Social Application
+                Killtime
               </div>
               <div class="portfolio__card--paragraph paragraph--small">
                 Social application to make friends and spend time well
               </div>
               <a
+                href="https://social-app-c3f27.web.app/"
+                target="_blank"
                 class="portfolio__card--btn btn btn--sm btn--outline btn--dark"
               >
                 <span class="btn--text">More</span>
@@ -49,12 +51,14 @@
             </div>
             <div class="portfolio__card--info">
               <div class="portfolio__card--title heading--secondary">
-                Handbags Store
+                Stockbag
               </div>
               <div class="portfolio__card--paragraph paragraph--small">
                 Store to buy and sell handbags
               </div>
               <a
+                href="https://handbag-store.web.app/"
+                target="_blank"
                 class="portfolio__card--btn btn btn--sm btn--outline btn--dark"
               >
                 <span class="btn--text">More</span>
