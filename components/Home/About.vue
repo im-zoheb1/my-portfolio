@@ -4,7 +4,7 @@
       <div class="about__card">
         <div class="about__img">
           <img
-            src="~assets/img/about-photo.png"
+            src="~assets/img/about-photo.jpg"
             alt="Zohaib Khan"
             class="about__img--img"
           />

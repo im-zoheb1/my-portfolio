@@ -1,8 +1,29 @@
 .header {
   background: url('~assets/img/header-bg-edited.png');
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed;
+  & .container {
+    @include respond(phone) {
+      // margin-left: 0;
+    }
+  }
+  &--sub-heading {
+    animation: moveInLeft 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+  &--primary-heading {
+    animation: moveInRight 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+  @include respond(phone) {
+    &--sub-heading {
+      margin-block-end: 1rem;
+    }
+    &--primary-heading {
+      font-size: 3.4rem;
+    }
+  }
   &--content {
     height: 100vh;
     text-align: center;
@@ -10,7 +31,8 @@
     color: $text-light;
     line-height: 1.45;
     @include respond(phone) {
-      text-align: left;
+      // text-align: left;
+      line-height: 1.6;
     }
   }
   .header__img {
@@ -21,8 +43,11 @@
     margin: 0 auto;
     margin-top: -4rem;
     margin-bottom: 2rem;
+    animation: moveInTop 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
     @include respond(phone) {
-      margin-left: 0;
+      // margin-left: 0;
+      margin-bottom: 3rem;
     }
     &--img {
       margin-top: -0.5rem;
@@ -40,6 +65,11 @@
   }
   &__btn {
     margin-block-start: 1.8rem;
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+    @include respond(phone) {
+      margin-block-start: 2.5rem;
+    }
   }
 }
 
