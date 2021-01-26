@@ -10,19 +10,39 @@
           <div class="footer__nav--link"><a>Contact Me</a></div>
         </ul>
         <ul class="footer__social-media">
-          <a class="footer__social-media--icon">
+          <a
+            href="https://web.facebook.com/Zuhaib02/"
+            target="blank"
+            class="footer__social-media--icon"
+          >
             <img src="~assets/svg/facebook.svg" alt="facebook" />
           </a>
-          <a class="footer__social-media--icon">
+          <a
+            href="https://codepen.io/zuhaib_khan"
+            target="blank"
+            class="footer__social-media--icon"
+          >
             <img src="~assets/svg/codepen.svg" alt="codepen" />
           </a>
-          <a class="footer__social-media--icon">
+          <a
+            href="https://www.instagram.com/im_zoheb/"
+            target="blank"
+            class="footer__social-media--icon"
+          >
             <img src="~assets/svg/instagram.svg" alt="instagram" />
           </a>
-          <a class="footer__social-media--icon">
+          <a
+            href="https://stackoverflow.com/users/11512006/zuhaib-khan"
+            target="blank"
+            class="footer__social-media--icon"
+          >
             <img src="~assets/svg/stackoverflow.svg" alt="stackoverflow.svg" />
           </a>
-          <a class="footer__social-media--icon">
+          <a
+            href="https://www.linkedin.com/in/zohaib-khan-96a3841b5/"
+            target="blank"
+            class="footer__social-media--icon"
+          >
             <img src="~assets/svg/linkedin.svg" alt="linkedin" />
           </a>
         </ul>

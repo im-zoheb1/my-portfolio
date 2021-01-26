@@ -12,6 +12,9 @@
 
 .paragraph--normal {
   font-size: $text-medium;
+  @include respond(phone) {
+    font-size: $text-large;
+  }
 }
 
 .paragraph--small {
