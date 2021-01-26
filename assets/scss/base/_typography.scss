@@ -19,4 +19,7 @@
 
 .paragraph--small {
   font-size: $text-small;
+  @include respond(phone) {
+    font-size: $text-large;
+  }
 }
