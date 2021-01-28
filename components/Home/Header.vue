@@ -36,6 +36,6 @@
         </a>
       </div>
     </div>
-    <TheNavbar />
+    <!-- <TheNavbar /> -->
   </header>
 </template>

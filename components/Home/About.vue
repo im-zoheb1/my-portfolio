@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <section class="about" id="about">
     <div class="container">
       <div data-aos="fade" class="about__card">
         <div class="about__img">
@@ -249,5 +249,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>

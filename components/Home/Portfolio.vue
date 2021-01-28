@@ -1,5 +1,5 @@
 <template>
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
     <div class="container">
       <div class="portfolio__content">
         <div data-aos="fade-up" class="portfolio__title heading--primary">

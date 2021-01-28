@@ -1,5 +1,5 @@
 <template>
-  <section class="features">
+  <section class="features" id="features">
     <div class="container">
       <!-- <h1 class="features--heading heading--primary">Features</h1> -->
       <div class="features__cards">

@@ -21,6 +21,13 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['~/assets/scss/main'],
 
+  modules: ['@nuxtjs/style-resources'],
+
+  //You will have to add this new object if it doesn't exist already
+  styleResources: {
+    scss: ['~/assets/scss/abstracts/_variables.scss'],
+  },
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [{ src: '@/plugins/aos.js', mode: 'client' }],
 
@@ -39,4 +46,17 @@ export default {
   /* styleResources: {
     scss: ['~/assets/sass/main.scss'],
   }, */
+  router: {
+    mode: 'history',
+    scrollBehavior(to) {
+      if (to.hash) {
+        return {
+          selector: to.hash,
+          offset: { x: 0, y: 0 },
+          behavior: 'smooth',
+        }
+      }
+      return window.scrollTo({ top: 0, behavior: 'smooth' })
+    },
+  },
 }

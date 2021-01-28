@@ -1,0 +1,135 @@
+<template>
+  <div class="navigation">
+    <label class="navigation__button">
+      <span class="navigation__icon">&nbsp;</span>
+    </label>
+    <div class="navigation__background">&nbsp;</div>
+    <nav class="navigation__nav">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Features</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">About</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Skills</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Portfolio</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.navigation-display.navigation {
+  display: none;
+}
+.navigation {
+  &__button {
+    background-color: $white-color;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 1rem;
+    right: 1rem;
+    box-shadow: 2px 2px 4px 0 rgba($dark-bg, 0.25);
+    cursor: pointer;
+    display: grid;
+  }
+  &__icon {
+    position: relative;
+    margin: auto;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $dark-bg;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.7rem;
+    }
+
+    &::after {
+      top: 0.7rem;
+    }
+  }
+  &__background {
+    background: linear-gradient(to right, $gradient-color-1, $gradient-color-2);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 2rem;
+    right: 1rem;
+  }
+  &__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(to right, $gradient-color-1, $gradient-color-2);
+    display: grid;
+  }
+  &__list {
+    margin: auto;
+    list-style: none;
+    text-align: center;
+  }
+  &__item {
+    margin-bottom: 1.5rem;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:hover {
+      transform: translateX(-5px);
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 3rem;
+    color: $text-dark;
+    letter-spacing: 2px;
+    font-weight: 400;
+    padding: 8px 12px;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      $dark-bg 50%
+    );
+    background-size: 250%;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-position: 100%;
+      color: $text-light;
+    }
+  }
+}
+
+@keyframes navLinkBg {
+  0% {
+  }
+  100% {
+  }
+}
+</style>
