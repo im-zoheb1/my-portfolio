@@ -1,6 +1,9 @@
 <template>
-  <div class="navigation">
-    <label class="navigation__button">
+  <div class="navigation" :class="{ 'navigation-display': navigationDisplay }">
+    <label
+      class="navigation__button"
+      @click="navigationDisplay = !navigationDisplay"
+    >
       <span class="navigation__icon">&nbsp;</span>
     </label>
     <div class="navigation__background">&nbsp;</div>
@@ -26,11 +29,22 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-.navigation-display.navigation {
-  display: none;
+<script>
+export default {
+  data() {
+    return {
+      navigationDisplay: false,
+    }
+  },
 }
+</script>
+
+<style lang="scss" scoped>
 .navigation {
+  display: none;
+  @include respond(phone) {
+    display: block;
+  }
   &__button {
     background-color: $white-color;
     width: 6rem;
@@ -43,6 +57,10 @@
     box-shadow: 2px 2px 4px 0 rgba($dark-bg, 0.25);
     cursor: pointer;
     display: grid;
+    @include respond(phone) {
+      width: 7rem;
+      height: 7rem;
+    }
   }
   &__icon {
     position: relative;
@@ -72,6 +90,14 @@
       top: 0.7rem;
     }
   }
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
   &__background {
     background: linear-gradient(to right, $gradient-color-1, $gradient-color-2);
     width: 6rem;
@@ -79,17 +105,25 @@
     border-radius: 100%;
     position: fixed;
     z-index: 1;
-    top: 2rem;
+    top: 1rem;
     right: 1rem;
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    @include respond(phone) {
+      width: 7rem;
+      height: 7rem;
+    }
   }
   &__nav {
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100%;
+    width: 0;
+    opacity: 0;
     z-index: 1;
-    background: linear-gradient(to right, $gradient-color-1, $gradient-color-2);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    // background: linear-gradient(to right, $gradient-color-1, $gradient-color-2);
     display: grid;
   }
   &__list {
@@ -125,11 +159,25 @@
     }
   }
 }
-
-@keyframes navLinkBg {
-  0% {
+.navigation-display.navigation {
+  .navigation__icon {
+    background: transparent;
   }
-  100% {
+  .navigation__icon::before {
+    transform: rotate(135deg);
+    top: 0;
+  }
+  .navigation__icon::after {
+    transform: rotate(-135deg);
+    top: 0;
+  }
+  .navigation__background {
+    transform: scale(80);
+  }
+  .navigation__nav {
+    width: 100%;
+    opacity: 1;
+    overflow: visible;
   }
 }
 </style>

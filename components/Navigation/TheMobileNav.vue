@@ -1,7 +1,13 @@
 <template>
   <nav class="navbar">
+    <div class="navbar__header-mobile" @click="nav = !nav">
+      <div></div>
+      <div class="navbar__button">
+        <div class="navbar__icon"></div>
+      </div>
+    </div>
     <div class="container">
-      <ul class="navbar__list">
+      <ul class="navbar__list" :class="{ 'display-none': nav }">
         <li class="navbar__item">
           <nuxt-link
             exact-active-class="active"
@@ -52,12 +58,17 @@
         </li>
       </ul>
     </div>
-    <div id="_progress"></div>
+    <div id="_progress-mobile"></div>
   </nav>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      nav: true,
+    }
+  },
   mounted() {
     document.addEventListener('scroll', function () {
       let scrollTop =
@@ -67,7 +78,7 @@ export default {
           document.body['scrollHeight']) - document.documentElement.clientHeight
       let scrollPercent = (scrollTop / scrollBottom) * 100 + '%'
       document
-        .getElementById('_progress')
+        .getElementById('_progress-mobile')
         .style.setProperty('--scroll', scrollPercent)
     })
   },
@@ -75,7 +86,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#_progress {
+#_progress-mobile {
   --scroll: 0%;
   background: linear-gradient(
     to right,
@@ -86,6 +97,7 @@ export default {
   height: 3px;
   z-index: 100;
 }
+
 .navbar {
   // border-bottom: 3px solid $accent-color;
   background-color: $dark-bg;
@@ -95,15 +107,65 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
+  display: none;
   @include respond(phone) {
-    display: none;
+    display: block;
+  }
+  &__header-mobile {
+    background-color: $dark-bg;
+    border-bottom: 1px solid rgba($white-color, 0.05);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // @include respond(phone) {
+    //   display: flex;
+    // }
+  }
+  &__button {
+    background-color: $text-light;
+    width: 6rem;
+    height: 5rem;
+    border-radius: 5px;
+    z-index: 2;
+    box-shadow: 2px 2px 4px 0 rgba($dark-bg, 0.25);
+    cursor: pointer;
+    display: grid;
+  }
+  &__icon {
+    position: relative;
+    margin: auto;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $dark-bg;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
   }
   &__list {
     display: flex;
     flex-direction: row;
     text-decoration: none;
     list-style: none;
-    font-size: $text-small;
+    font-size: $text-large;
     font-weight: 400;
     color: $text-light;
     letter-spacing: 2px;
@@ -118,11 +180,15 @@ export default {
     &--link {
       text-decoration: none;
       color: $text-light;
-      //  &.active {
-      //   font-weight: 500;
-      //   color: $accent-color;
-      // }
+      /* &.active {
+        font-weight: 500;
+        color: $accent-color;
+      } */
     }
   }
+}
+
+.display-none {
+  display: none;
 }
 </style>

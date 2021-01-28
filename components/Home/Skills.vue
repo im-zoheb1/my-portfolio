@@ -1,5 +1,5 @@
 <template>
-  <section class="skills">
+  <section class="skills" id="skills">
     <div class="container">
       <div class="skills__content">
         <div data-aos="fade-up" class="skills__title">

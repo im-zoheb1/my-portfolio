@@ -26,7 +26,10 @@ export default {
 
   //You will have to add this new object if it doesn't exist already
   styleResources: {
-    scss: ['~/assets/scss/abstracts/_variables.scss'],
+    scss: [
+      '~/assets/scss/abstracts/_variables.scss',
+      '~/assets/scss/abstracts/_mixins.scss',
+    ],
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)

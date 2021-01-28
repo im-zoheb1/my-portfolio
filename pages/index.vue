@@ -2,7 +2,9 @@
   <div>
     <!-- <TheResponsiveNavbar /> -->
     <Header />
+    <TheResponsiveNavbar />
     <TheNavbar />
+    <!-- <TheMobileNav /> -->
     <Features />
     <About />
     <Skills />
@@ -13,8 +15,8 @@
 </template>
 
 <script>
-/* export default {
-  data() {
+export default {
+  /* data() {
     return {
       sectionObserver: null,
     }
@@ -38,7 +40,7 @@
       )
 
       // Observe each section
-      const sections = document.querySelectorAll('section')
+      const sections = document.querySelectorAll('.section')
       sections.forEach((section) => {
         this.sectionObserver.observe(section)
       })
@@ -52,8 +54,8 @@
         }
       }
     },
-  },
-} */
+  }, */
+}
 </script>
 
 <style></style>

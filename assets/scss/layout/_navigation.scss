@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
   // border-bottom: 3px solid $accent-color;
   background-color: $dark-bg;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
@@ -7,6 +7,9 @@
   top: 0;
   left: 0;
   width: 100%;
+  @include respond(phone) {
+    display: none;
+  }
   &__list {
     display: flex;
     flex-direction: row;
@@ -27,10 +30,11 @@
     &--link {
       text-decoration: none;
       color: $text-light;
-      &.active {
-        font-weight: 500;
-        color: $accent-color;
-      }
+      //  &.active {
+      //   font-weight: 500;
+      //   color: $accent-color;
+      // }
     }
   }
 }
+ */
