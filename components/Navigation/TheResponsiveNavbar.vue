@@ -10,19 +10,52 @@
     <nav class="navigation__nav">
       <ul class="navigation__list">
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Features</a>
+          <nuxt-link
+            @click.native="navigationDisplay = !navigationDisplay"
+            :to="{ path: '/' }"
+            class="navigation__link"
+            >Home</nuxt-link
+          >
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">About</a>
+          <nuxt-link
+            @click.native="navigationDisplay = !navigationDisplay"
+            :to="{ path: '/', hash: '#features' }"
+            class="navigation__link"
+            >Features</nuxt-link
+          >
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Skills</a>
+          <nuxt-link
+            @click.native="navigationDisplay = !navigationDisplay"
+            :to="{ path: '/', hash: '#about' }"
+            class="navigation__link"
+            >About</nuxt-link
+          >
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Portfolio</a>
+          <nuxt-link
+            @click.native="navigationDisplay = !navigationDisplay"
+            :to="{ path: '/', hash: '#skills' }"
+            class="navigation__link"
+            >Skills</nuxt-link
+          >
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Contact Me</a>
+          <nuxt-link
+            @click.native="navigationDisplay = !navigationDisplay"
+            :to="{ path: '/', hash: '#portfolio' }"
+            class="navigation__link"
+            >Portfolio</nuxt-link
+          >
+        </li>
+        <li class="navigation__item">
+          <nuxt-link
+            @click.native="navigationDisplay = !navigationDisplay"
+            :to="{ path: '/', hash: '#contact' }"
+            class="navigation__link"
+            >Contact</nuxt-link
+          >
         </li>
       </ul>
     </nav>
