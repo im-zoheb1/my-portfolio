@@ -23,6 +23,7 @@
     padding: 1rem;
     @include respond(phone) {
       font-size: 2.2rem;
+      padding: 1.2rem;
     }
   }
 }

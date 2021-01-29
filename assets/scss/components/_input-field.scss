@@ -8,8 +8,8 @@
   margin-bottom: 1.5rem;
   font-family: inherit;
   @include respond(phone) {
-    font-size: 2.2rem;
-    padding: 1.5rem;
+    font-size: $text-large;
+    padding: 1.2rem;
     color: #555;
     letter-spacing: 1px;
   }
