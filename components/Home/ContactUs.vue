@@ -85,15 +85,20 @@ export default {
         subject: "Mail from Zohaib's portfolio",
         message: this.message,
       }
-      console.log(credentials)
-      this.$axios
+
+      this.$nuxt.$emit('display-model-event', true)
+      setTimeout(() => {
+        this.$nuxt.$emit('display-model-event', false)
+      }, 4000)
+
+      /* this.$axios
         .post('https://contactupapi.herokuapp.com/contact_us', credentials)
         .then(() => {
           console.log('thanks for contacting')
         })
         .catch((err) => {
           console.log('error contacting')
-        })
+        }) */
     },
   },
 }

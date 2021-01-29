@@ -39,6 +39,5 @@
         </nuxt-link>
       </div>
     </div>
-    <!-- <TheNavbar /> -->
   </header>
 </template>
