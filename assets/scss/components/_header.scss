@@ -46,7 +46,6 @@
     animation: moveInTop 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
     @include respond(phone) {
-      // margin-left: 0;
       margin-bottom: 3rem;
     }
     &--img {
@@ -67,64 +66,11 @@
     margin-block-start: 1.8rem;
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
+    &:hover svg {
+      transform: rotate(90deg);
+    }
     @include respond(phone) {
       margin-block-start: 2.5rem;
     }
   }
 }
-
-/* 
-.header {
-    height: 85vh;
-    background-image: linear-gradient(to right,
-            rgba($color-primary-light, 0.801),
-            rgba($color-primary-dark, 0.801)),
-        url(../images/coverphoto-small.jpg);
-    background-size: cover;
-    background-position: top;
-
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    position: relative;
-
-    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-        height: 95vh;
-    }
-
-    @media (min-resolution: 192dpi) and (min-width: 37.5em),
-            (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-            (min-width: 125em){
-        background-image: linear-gradient(
-            to right bottom,
-            rgba($color-secondary-light, 0.8),
-            rgba($color-secondary-dark, 0.8)),
-        url("../images/coverphoto.jpg");
-    }
-
-    @include respond(phone){
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    }
-
-    &__logo-box {
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
-    }
-
-    &__logo {
-        height: 5rem;
-        color: $color-white;
-    }
-
-    &__text-box {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-    }
-}
- */

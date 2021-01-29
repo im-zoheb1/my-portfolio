@@ -22,7 +22,7 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['~/assets/scss/main'],
 
-  modules: ['@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/axios'],
 
   //You will have to add this new object if it doesn't exist already
   styleResources: {

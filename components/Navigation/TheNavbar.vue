@@ -83,7 +83,7 @@ export default {
     transparent 0
   );
   width: 100%;
-  height: 3px;
+  height: 4px;
   z-index: 100;
 }
 .navbar {

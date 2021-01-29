@@ -3,11 +3,29 @@
     <div class="container">
       <div class="footer__content">
         <ul class="footer__nav paragraph--small">
-          <div class="footer__nav--link"><a>Features</a></div>
-          <div class="footer__nav--link"><a>About</a></div>
-          <div class="footer__nav--link"><a>What i do? </a></div>
-          <div class="footer__nav--link"><a>Portfolio</a></div>
-          <div class="footer__nav--link"><a>Contact Me</a></div>
+          <li class="footer__nav--link">
+            <nuxt-link :to="{ path: '/', hash: '#features' }"
+              >Features</nuxt-link
+            >
+          </li>
+          <li class="footer__nav--link">
+            <nuxt-link :to="{ path: '/', hash: '#about' }"
+              >What i do?</nuxt-link
+            >
+          </li>
+          <li class="footer__nav--link">
+            <nuxt-link :to="{ path: '/', hash: '#skills' }">Skills</nuxt-link>
+          </li>
+          <li class="footer__nav--link">
+            <nuxt-link :to="{ path: '/', hash: '#portfolio' }"
+              >Portfolio</nuxt-link
+            >
+          </li>
+          <li class="footer__nav--link">
+            <nuxt-link :to="{ path: '/', hash: '#contact' }"
+              >Contact me</nuxt-link
+            >
+          </li>
         </ul>
         <ul class="footer__social-media">
           <a

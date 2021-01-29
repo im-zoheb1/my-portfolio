@@ -18,7 +18,10 @@
         <div class="header--primary-heading heading--primary">
           I bring your <span class="header--highlight">ideas to life</span>
         </div>
-        <a class="header__btn btn btn--lg btn--outline btn--light">
+        <nuxt-link
+          :to="{ path: '/', hash: 'portfolio' }"
+          class="header__btn btn btn--lg btn--outline btn--light"
+        >
           <span class="btn--text">Portfolio</span>
           <svg
             class="btn--icon"
@@ -33,7 +36,7 @@
               d="M11.293 17.293l1.414 1.414L19.414 12l-6.707-6.707l-1.414 1.414L15.586 11H6v2h9.586z"
             />
           </svg>
-        </a>
+        </nuxt-link>
       </div>
     </div>
     <!-- <TheNavbar /> -->

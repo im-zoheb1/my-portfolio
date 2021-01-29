@@ -35,22 +35,28 @@
             </li>
           </ul>
         </div>
-        <form data-aos="fade" class="contact__form">
+        <form data-aos="fade" class="contact__form" @submit.prevent="contact">
           <h2 class="contact__form--title heading--secondary">Contact me</h2>
           <input
             class="contact__form--input form--input form--input--text"
             type="text"
             placeholder="First name"
+            required
+            v-model="name"
           />
           <input
             class="contact__form--input form--input form--input--text"
-            type="text"
+            type="email"
+            required
+            validator
             placeholder="Email address"
+            v-model="email"
           />
           <textarea
             class="contact__form--textarea form--input form--input--textarea"
             rows="6"
             placeholder="Message"
+            v-model="message"
           ></textarea>
           <button class="contact__form--btn form--btn" type="submit">
             Send
@@ -60,3 +66,35 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      name: null,
+      email: null,
+      message: null,
+    }
+  },
+  methods: {
+    contact() {
+      console.log('submit method executed')
+      const credentials = {
+        name: this.name,
+        email: this.email,
+        subject: "Mail from Zohaib's portfolio",
+        message: this.message,
+      }
+      console.log(credentials)
+      this.$axios
+        .post('https://contactupapi.herokuapp.com/contact_us', credentials)
+        .then(() => {
+          console.log('thanks for contacting')
+        })
+        .catch((err) => {
+          console.log('error contacting')
+        })
+    },
+  },
+}
+</script>

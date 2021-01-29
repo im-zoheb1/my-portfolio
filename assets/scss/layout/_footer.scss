@@ -26,13 +26,18 @@
     &--link {
       margin-top: 5px;
       transition: 0.2s all cubic-bezier(0.04, 0.48, 0.1, 0.94);
+      list-style-type: none;
+      a {
+        color: $text-light;
+        text-decoration: none;
+      }
       @include respond(phone) {
         padding: 5px;
-      }
-      &:hover {
-        color: $primary-color;
-        transform: scale(1.05) rotate(5deg);
-        background-color: black;
+        &:hover {
+          color: $primary-color;
+          transform: scale(1.05) rotate(5deg);
+          background-color: black;
+        }
       }
     }
   }
