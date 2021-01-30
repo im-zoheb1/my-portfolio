@@ -21,9 +21,37 @@
     text-align: center;
     font-size: $text-medium;
     padding: 1rem;
+    cursor: pointer;
     @include respond(phone) {
       font-size: 2.2rem;
       padding: 1.2rem;
     }
+  }
+  &--btn:disabled {
+    @include respond(phone) {
+      padding: 1.2rem;
+    }
+  }
+}
+.loader {
+  border: 3px solid #f3f3f3; /* Light grey */
+  border-top: 3px solid transparent; /* Blue */
+  border-radius: 50%;
+  margin: auto;
+  width: 2rem;
+  height: 2rem;
+  animation: spin 2s linear infinite;
+  @include respond(phone) {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

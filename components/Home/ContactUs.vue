@@ -54,12 +54,25 @@
           />
           <textarea
             class="contact__form--textarea form--input form--input--textarea"
+            required
             rows="6"
             placeholder="Message"
             v-model="message"
           ></textarea>
-          <button class="contact__form--btn form--btn" type="submit">
+          <button
+            v-if="!loading"
+            class="contact__form--btn form--btn"
+            type="submit"
+          >
             Send
+          </button>
+          <button
+            v-else
+            disabled
+            class="contact__form--btn form--btn"
+            type="submit"
+          >
+            <div class="loader"></div>
           </button>
         </form>
       </div>
@@ -71,34 +84,47 @@
 export default {
   data() {
     return {
+      loading: false,
       name: null,
       email: null,
       message: null,
     }
   },
   methods: {
+    // clear credentials method
+    clearCredentials() {
+      this.name = ''
+      this.email = ''
+      this.message = ''
+    },
+    // emit the event method
+    emitModel(status) {
+      this.$nuxt.$emit('display-model-event', [true, status])
+      setTimeout(() => {
+        this.$nuxt.$emit('display-model-event', [false, status])
+      }, 3000)
+    },
+    // sending the email
     contact() {
-      console.log('submit method executed')
+      // the credentials of contact form
       const credentials = {
         name: this.name,
         email: this.email,
         subject: "Mail from Zohaib's portfolio",
         message: this.message,
       }
-
-      this.$nuxt.$emit('display-model-event', true)
-      setTimeout(() => {
-        this.$nuxt.$emit('display-model-event', false)
-      }, 4000)
-
-      /* this.$axios
+      this.loading = true
+      this.$axios
         .post('https://contactupapi.herokuapp.com/contact_us', credentials)
-        .then(() => {
-          console.log('thanks for contacting')
+        .then(({ status }) => {
+          this.loading = false
+          this.emitModel(status)
+          this.clearCredentials()
         })
-        .catch((err) => {
-          console.log('error contacting')
-        }) */
+        .catch(({ response }) => {
+          this.loading = false
+          this.emitModel(response.status)
+        })
     },
   },
 }

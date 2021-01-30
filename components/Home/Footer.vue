@@ -22,9 +22,7 @@
             >
           </li>
           <li class="footer__nav--link">
-            <nuxt-link :to="{ path: '/', hash: '#contact' }"
-              >Contact me</nuxt-link
-            >
+            <nuxt-link :to="{ path: '/', hash: '#contact' }">Ping me</nuxt-link>
           </li>
         </ul>
         <ul class="footer__social-media">
