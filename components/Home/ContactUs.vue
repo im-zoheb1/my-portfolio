@@ -102,7 +102,7 @@ export default {
       this.$nuxt.$emit('display-model-event', [true, status])
       setTimeout(() => {
         this.$nuxt.$emit('display-model-event', [false, status])
-      }, 3000)
+      }, 4000)
     },
     // sending the email
     contact() {
